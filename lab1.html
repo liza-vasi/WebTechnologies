@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Историк и реконструктор</title>
+    <style>
+        body {
+            font-family:  'Times New Roman';
+            background-color: #F9F1E6;
+            color: #3E2723;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #5D2918;
+            color: #FFF3E0;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 1000px;
+            margin: 30px auto;
+            
+        }
+
+        main {
+            flex: 5;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #D7CCC8;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .photo-container {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            background-color: #FFF8F0;
+            font-family: inherit;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #5D2918;
+            color: #FFF3E0;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Васильева Елизавета</h1>
+        <p>Историк и реконструктор</p>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="photo-container">
+                <img src="photo.jpg" alt="Моя аватарка из вк" width="300" height="300">
+            </div>
+
+            <section id="skills">
+                <h2>Навыки</h2>
+                <ul>
+                    <li>Работа с историческими архивами и первичными источниками</li>
+                    <li>Создание исторических карт и схем сражений</li>
+                    <li>Организация и координация массовых исторических мероприятий</li>
+                    <li>Проведение лекций</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Проекты</h2>
+                <ol>
+                    <li><strong>Эпоха Троянской войны (Бронзовый век):</strong> Реконструкция быта, вооружения и тактики микенской пехоты.</li>
+                    <li><strong>Русская дружина X века:</strong> Полная реконструкция доспехов и вооружения дружинников князя Святослава.</li>
+                    <li><strong>Великий шелковый путь:</strong> Создание интерактивной исторической карты торговых маршрутов и культурного обмена.</li>
+                </ol>
+            </section>
+
+            <section id="contacts">
+                <h2>Связь</h2>
+                <form action="#" method="post">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите  имя" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Введите email" required>
+                    
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" placeholder="Напишите  сообщение"  required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </main>
+
+        <aside>
+            <h3>Любимая эпоха</h3>
+            <p><strong>Правление Петра I</strong></p>
+            <p>Время переориентирования России, как государства, в сторону Европы, внутренняя модернизация страны.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; Copyright 2026 </p>
+    </footer>
+</body>
+</html>

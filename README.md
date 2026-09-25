@@ -1,4 +1,4 @@
-# WebTechnologie
+# WebTechnologies
 # 932321.vasilyeva.elizaveta.lab1
 
 Вариант 19

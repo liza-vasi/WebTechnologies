@@ -1,0 +1,145 @@
+
+:root {
+    --color-primary: #B85C38;   
+    --color-accent:  #3E2723;  
+    --color-bg:      #F4E4C1;   
+    --color-text:    #2E1A14;
+    --color-light:   #FFF3E0;
+
+    --font-main:  'Times New Roman', serif;
+    --font-title: 'Georgia', serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;              
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 5;
+}
+
+aside {
+    flex: 1;
+    background-color: var(--color-bg);
+    padding: 20px;
+    height: fit-content;
+    position: static;                
+}
+
+.photo-container {
+    text-align: center;
+    position: relative;              
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+a:visited {
+    color: var(--color-accent);
+}
+
+a:hover {
+    color: var(--color-accent);
+    border-bottom: 2px dashed var(--color-primary);   
+}
+
+a:active {
+    color: #8B3A1F;
+}
+
+a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    background-color: var(--color-bg);
+    font-family: inherit;
+    color: var(--color-text);
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--color-accent);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    
+}
+
+button {
+    padding: 12px 24px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font-family: var(--font-title);
+    border: 2px solid var(--color-accent);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-accent);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+button:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+footer {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}

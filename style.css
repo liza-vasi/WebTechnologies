@@ -1,0 +1,89 @@
+:root {
+    --color-primary: #B85C38;
+    --color-accent:  #3E2723;
+    --color-bg:      #F4E4C1;
+    --color-text:    #2E1A14;
+    --color-light:   #FFF3E0;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+main { flex: 4; }
+aside { flex: 1; background-color: var(--color-light); padding: 15px; }
+
+footer {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ===== FLEXBOX: карточки эпох ===== */
+.flex-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    flex: 1 1 300px;
+    background-color: var(--color-light);
+    padding: 15px;
+    border: 1px solid var(--color-accent);
+}
+
+.card h3 { margin: 0 0 5px; color: var(--color-accent); }
+.card time { color: var(--color-primary); font-weight: bold; }
+
+/* ===== GRID: артефакты ===== */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.artifact {
+    background-color: var(--color-light);
+    padding: 15px;
+    border: 1px solid var(--color-accent);
+}
+
+.artifact h4 { margin: 0 0 5px; color: var(--color-accent); }
+.artifact time { color: var(--color-primary); font-weight: bold; }
+
+/* ===== АДАПТИВНОСТЬ ===== */
+/* Планшет: карточки в 2 колонки */
+@media (max-width: 1023px) {
+    .card { flex: 1 1 calc(50% - 15px); }
+}
+
+/* Мобильный: всё в 1 колонку */
+@media (max-width: 767px) {
+    .container { flex-direction: column; }
+    .card { flex: 1 1 100%; }
+    .grid-gallery { grid-template-columns: 1fr; }
+}

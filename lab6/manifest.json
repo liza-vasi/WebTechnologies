@@ -1,0 +1,9 @@
+
+{
+    "name": "Историк и реконструктор",
+    "short_name": "Историк",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#F4E4C1",
+    "theme_color": "#3E2723"
+}

@@ -1,0 +1,252 @@
+:root {
+    --color-primary: #B85C38;
+    --color-accent:  #3E2723;
+    --color-bg:      #F4E4C1;
+    --color-text:    #2E1A14;
+    --color-light:   #FFF3E0;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+main { flex: 4; min-width: 0; }
+aside { flex: 1; min-width: 0; background-color: var(--color-light); padding: 15px; }
+
+footer {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.flex-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    flex: 1 1 300px;
+    background-color: var(--color-light);
+    padding: 15px;
+    border: 1px solid var(--color-accent);
+}
+
+.card h3 { margin: 0 0 5px; color: var(--color-accent); }
+.card time { color: var(--color-primary); font-weight: bold; }
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.artifact {
+    background-color: var(--color-light);
+    padding: 15px;
+    border: 1px solid var(--color-accent);
+}
+
+.artifact h4 { margin: 0 0 5px; color: var(--color-accent); }
+.artifact time { color: var(--color-primary); font-weight: bold; }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.photo-container img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card img, .artifact img {
+    display: block;
+    width: 120px;
+    height: 90px;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 1023px) {
+    .container { flex-direction: column; }
+    .card { flex: 1 1 calc(50% - 15px); }
+}
+
+@media (max-width: 767px) {
+    .container { flex-direction: column; }
+    .card { flex: 1 1 100%; }
+    .grid-gallery { grid-template-columns: 1fr; }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.photo-container {
+    text-align: center;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.main-nav a {
+    color: var(--color-light);
+}
+
+button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+#theme-button {
+    margin-top: 12px;
+}
+
+#timeline {
+    margin: 25px 0;
+}
+
+.timeline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    background-color: var(--color-light);
+    border: 1px solid var(--color-accent);
+    padding: 12px;
+}
+
+.timeline-event p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#contacts form {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-accent);
+    border-radius: 6px;
+    padding: 20px;
+}
+
+#contacts label {
+    display: block;
+    margin-top: 10px;
+}
+
+#contacts input,
+#contacts textarea {
+    display: block;
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ad8c7d;
+    border-radius: 4px;
+    font: inherit;
+}
+
+#contacts textarea {
+    min-height: 100px;
+}
+
+#contacts button {
+    margin-top: 12px;
+}
+
+body.theme-dark {
+    --color-bg: #211b19;
+    --color-text: #f8eee7;
+    --color-light: #382d28;
+    --color-accent: #b99a88;
+}
+
+body.theme-dark header {
+    background-color: #3E2723;
+    color: #FFF3E0;
+}
+
+body.theme-dark header a {
+    color: #FFF3E0;
+}
+
+body.theme-dark .card,
+body.theme-dark .artifact,
+body.theme-dark .timeline-event,
+body.theme-dark aside,
+body.theme-dark #contacts form {
+    color: #f8eee7;
+}
+
+body.theme-dark .card h3,
+body.theme-dark .artifact h4 {
+    color: #f8eee7;
+}
+
+body.theme-dark #contacts input,
+body.theme-dark #contacts textarea {
+    background-color: white;
+    color: #222;
+}
+
+@media (max-width: 767px) {
+    .timeline-event {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
